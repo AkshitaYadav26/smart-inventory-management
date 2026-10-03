@@ -1,0 +1,1179 @@
+/* =====================================================
+   GLOBAL SETTINGS
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Main page */
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f3f6fa;
+
+    color: #172033;
+
+}
+
+
+/* Main container */
+.container {
+
+    max-width: 1350px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+}
+
+
+/* =====================================================
+   NAVIGATION BAR
+   ===================================================== */
+
+.navbar {
+
+    height: 75px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+
+/* Logo */
+.logo {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+
+}
+
+
+/* Logo second part */
+.logo span {
+
+    color: #111827;
+
+}
+
+
+/* Navigation links */
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+/* Navigation link */
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+
+}
+
+
+/* Hover */
+.nav-links a:hover {
+
+    color: #2563eb;
+
+}
+
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+
+/*
+   YOUR UPLOADED IMAGE IS USED HERE.
+
+   Make sure the image file is named:
+
+   inventory.jpg
+
+   and is in the same folder as index.html.
+*/
+
+.hero {
+
+    min-height: 510px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 70px 60px;
+
+    border-radius: 0 0 25px 25px;
+
+    color: white;
+
+
+    /* ================================================
+       BACKGROUND IMAGE
+       ================================================ */
+
+    background-image:
+        url("inventory.jpg");
+
+
+    /* Make image cover the complete section */
+    background-size: cover;
+
+
+    /* Keep center of image visible */
+    background-position: center;
+
+
+    /* Prevent image repetition */
+    background-repeat: no-repeat;
+
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+   ===================================================== */
+
+/*
+   The uploaded image is bright.
+
+   This transparent dark layer makes
+   the text easier to read.
+*/
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 20, 40, 0.85),
+            rgba(3, 20, 40, 0.48),
+            rgba(3, 20, 40, 0.25)
+        );
+
+}
+
+
+/* =====================================================
+   HERO CONTENT
+   ===================================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 600px;
+
+}
+
+
+/* Small heading */
+.small-heading {
+
+    color: #6ee7b7;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Main heading */
+.hero h1 {
+
+    font-size: 54px;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -1px;
+
+}
+
+
+/* Green heading */
+.hero h1 span {
+
+    color: #4ade80;
+
+}
+
+
+/* Description */
+.hero-description {
+
+    max-width: 520px;
+
+    color: #e2e8f0;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =====================================================
+   START OPTIMIZING BUTTON
+   ===================================================== */
+
+.primary-btn {
+
+    background: #22c55e;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.primary-btn:hover {
+
+    background: #16a34a;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   WAREHOUSE STATUS CARD
+   ===================================================== */
+
+.status-card {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 330px;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(7, 25, 45, 0.70);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.25);
+
+}
+
+
+/* Warehouse icon */
+.status-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Status heading */
+.status-card h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Status number */
+.status-number {
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Progress background */
+.progress-container {
+
+    width: 100%;
+
+    height: 9px;
+
+    background: #334155;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+/* Progress fill */
+.progress-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #4ade80;
+
+    transition: 0.5s;
+
+}
+
+
+/* Percentage */
+.status-card p {
+
+    margin-top: 10px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   DASHBOARD STATISTICS
+   ===================================================== */
+
+.stats-section {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin: 25px 0;
+
+}
+
+
+/* Stat card */
+.stat-card {
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.3s;
+
+}
+
+
+/* Card hover */
+.stat-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(15, 23, 42, 0.08);
+
+}
+
+
+/* Stat icon */
+.stat-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+}
+
+
+/* Icon backgrounds */
+.stat-icon.blue {
+
+    background: #dbeafe;
+
+}
+
+.stat-icon.green {
+
+    background: #dcfce7;
+
+}
+
+.stat-icon.orange {
+
+    background: #ffedd5;
+
+}
+
+.stat-icon.purple {
+
+    background: #ede9fe;
+
+}
+
+
+/* Stat label */
+.stat-card p {
+
+    font-size: 12px;
+
+    color: #64748b;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* Stat value */
+.stat-card h2 {
+
+    font-size: 23px;
+
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+.main-content {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+/* General panel */
+.panel {
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e5e7eb;
+
+}
+
+
+/* Section label */
+.section-label {
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 6px;
+
+}
+
+
+/* Panel heading */
+.panel h2 {
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* Panel description */
+.panel-description {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================================
+   INVENTORY TABLE
+   ===================================================== */
+
+.table-container {
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+th {
+
+    text-align: left;
+
+    padding: 13px;
+
+    font-size: 12px;
+
+    color: #64748b;
+
+    background: #f8fafc;
+
+}
+
+
+td {
+
+    padding: 14px 13px;
+
+    border-bottom:
+        1px solid #eef2f7;
+
+    font-size: 13px;
+
+}
+
+
+/* Delete button */
+.delete-btn {
+
+    border: none;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   ADD PRODUCT
+   ===================================================== */
+
+.add-product {
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid #e5e7eb;
+
+}
+
+
+.add-product h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Input row */
+.input-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 0.7fr 0.8fr auto;
+
+    gap: 8px;
+
+}
+
+
+/* Input fields */
+input {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border:
+        1px solid #dbe2ea;
+
+    border-radius: 7px;
+
+    outline: none;
+
+}
+
+
+/* Input focus */
+input:focus {
+
+    border-color: #2563eb;
+
+}
+
+
+/* Add product button */
+.add-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   OPTIMIZATION ENGINE
+   ===================================================== */
+
+.capacity-box {
+
+    margin: 20px 0 25px;
+
+}
+
+
+.capacity-box label {
+
+    display: block;
+
+    font-size: 12px;
+
+    color: #64748b;
+
+    margin-bottom: 8px;
+
+}
+
+
+.capacity-box input {
+
+    font-size: 16px;
+
+}
+
+
+/* Utilization header */
+.utilization-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* Progress background */
+.large-progress {
+
+    width: 100%;
+
+    height: 13px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+/* Progress fill */
+.large-progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #22c55e
+        );
+
+    transition: 0.5s;
+
+}
+
+
+/* Optimize button */
+.optimize-btn {
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #111827;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.optimize-btn:hover {
+
+    background: #2563eb;
+
+}
+
+
+/* Algorithm information */
+.algorithm-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #eff6ff;
+
+    border-radius: 10px;
+
+}
+
+
+.algorithm-icon {
+
+    font-size: 25px;
+
+}
+
+
+.algorithm-info p {
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+
+}
+
+
+/* =====================================================
+   RESULT SECTION
+   ===================================================== */
+
+.result-section {
+
+    margin-top: 20px;
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    border: 1px solid #bbf7d0;
+
+    display: none;
+
+}
+
+
+.result-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Success icon */
+.success-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+}
+
+
+/* Result cards */
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.result-item {
+
+    background: #f8fafc;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+}
+
+
+.result-item span {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.result-item strong {
+
+    font-size: 22px;
+
+}
+
+
+/* Selected products */
+.selected-products {
+
+    margin-top: 25px;
+
+}
+
+
+.selected-products h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* Selected product */
+.selected-product {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px;
+
+    background: #f0fdf4;
+
+    border:
+        1px solid #bbf7d0;
+
+    border-radius: 8px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.selected-product strong {
+
+    color: #166534;
+
+}
+
+
+.empty-message {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+
+    margin-top: 40px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    border-top:
+        1px solid #e5e7eb;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .hero {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 40px;
+
+    }
+
+
+    .status-card {
+
+        width: 100%;
+
+        max-width: 400px;
+
+    }
+
+
+    .stats-section {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .main-content {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .container {
+
+        padding: 0 12px;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        padding: 45px 25px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 37px;
+
+    }
+
+
+    .stats-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .input-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .result-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

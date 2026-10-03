@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================
+         BASIC HTML SETTINGS
+         ========================================= -->
+
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes website responsive -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>SmartInventory - Smart Warehouse System</title>
+
+
+    <!-- =========================================
+         CONNECT CSS FILE
+         ========================================= -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         MAIN WEBSITE CONTAINER
+         ========================================= -->
+
+    <div class="container">
+
+
+        <!-- =========================================
+             NAVIGATION BAR
+             ========================================= -->
+
+        <nav class="navbar">
+
+            <!-- Website logo -->
+            <div class="logo">
+
+                📦 Smart<span>Inventory</span>
+
+            </div>
+
+
+            <!-- Navigation links -->
+            <div class="nav-links">
+
+                <a href="#dashboard">
+                    Dashboard
+                </a>
+
+                <a href="#inventory">
+                    Inventory
+                </a>
+
+                <a href="#optimization">
+                    Optimization
+                </a>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- =========================================
+             HERO SECTION
+             
+             The inventory warehouse image is used
+             as the background through CSS.
+             ========================================= -->
+
+        <section class="hero"
+                 id="dashboard">
+
+
+            <!-- =====================================
+                 DARK IMAGE OVERLAY
+                 
+                 This makes the text easier to read
+                 on top of the warehouse image.
+                 ===================================== -->
+
+            <div class="hero-overlay"></div>
+
+
+            <!-- =====================================
+                 HERO LEFT CONTENT
+                 ===================================== -->
+
+            <div class="hero-content">
+
+                <!-- Small heading -->
+                <p class="small-heading">
+                    SMART WAREHOUSE SYSTEM
+                </p>
+
+
+                <!-- Main heading -->
+                <h1>
+
+                    Smarter Stock.<br>
+
+                    <span>
+                        Better Decisions.
+                    </span>
+
+                </h1>
+
+
+                <!-- Description -->
+                <p class="hero-description">
+
+                    Optimize your warehouse by selecting
+                    the right products under limited
+                    storage capacity.
+
+                </p>
+
+
+                <!-- Start button -->
+                <button
+                    class="primary-btn"
+                    onclick="scrollToOptimization()">
+
+                    Start Optimizing →
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 WAREHOUSE STATUS CARD
+                 ===================================== -->
+
+            <div class="status-card">
+
+                <!-- Icon -->
+                <div class="status-icon">
+                    🏭
+                </div>
+
+
+                <!-- Card title -->
+                <h3>
+                    Warehouse Status
+                </h3>
+
+
+                <!-- Storage information -->
+                <div class="status-number">
+
+                    <span id="heroUsed">
+                        0
+                    </span>
+
+                    /
+
+                    <span id="heroCapacity">
+                        10
+                    </span>
+
+                    units
+
+                </div>
+
+
+                <!-- Progress bar -->
+                <div class="progress-container">
+
+                    <div
+                        class="progress-bar"
+                        id="heroProgress">
+                    </div>
+
+                </div>
+
+
+                <!-- Percentage -->
+                <p id="heroPercentage">
+                    0% utilized
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             DASHBOARD STATISTICS
+             ========================================= -->
+
+        <section class="stats-section">
+
+
+            <!-- Products -->
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    📦
+                </div>
+
+                <div>
+
+                    <p>
+                        Products
+                    </p>
+
+                    <h2 id="productCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Capacity -->
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    🏢
+                </div>
+
+                <div>
+
+                    <p>
+                        Capacity
+                    </p>
+
+                    <h2 id="capacityDisplay">
+                        10
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Space Used -->
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    📊
+                </div>
+
+                <div>
+
+                    <p>
+                        Space Used
+                    </p>
+
+                    <h2 id="spaceUsed">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Benefit -->
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    💰
+                </div>
+
+                <div>
+
+                    <p>
+                        Benefit
+                    </p>
+
+                    <h2 id="benefitDisplay">
+                        ₹0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             MAIN CONTENT
+             ========================================= -->
+
+        <section class="main-content">
+
+
+            <!-- =====================================
+                 INVENTORY MANAGEMENT
+                 ===================================== -->
+
+            <div class="panel inventory-panel"
+                 id="inventory">
+
+
+                <!-- Section heading -->
+                <div class="panel-header">
+
+                    <p class="section-label">
+                        INVENTORY MANAGEMENT
+                    </p>
+
+                    <h2>
+                        Available Products
+                    </h2>
+
+                    <p class="panel-description">
+
+                        Add products with their storage
+                        requirement and expected benefit.
+
+                    </p>
+
+                </div>
+
+
+                <!-- =================================
+                     PRODUCT TABLE
+                     ================================= -->
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Product
+                                </th>
+
+                                <th>
+                                    Storage
+                                </th>
+
+                                <th>
+                                    Benefit
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <!-- JavaScript inserts products here -->
+                        <tbody id="productTable">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- =================================
+                     ADD PRODUCT
+                     ================================= -->
+
+                <div class="add-product">
+
+                    <h3>
+                        Add New Product
+                    </h3>
+
+
+                    <div class="input-row">
+
+
+                        <!-- Product name -->
+                        <input
+                            type="text"
+                            id="productName"
+                            placeholder="Product name">
+
+
+                        <!-- Storage -->
+                        <input
+                            type="number"
+                            id="productStorage"
+                            placeholder="Storage"
+                            min="1">
+
+
+                        <!-- Benefit -->
+                        <input
+                            type="number"
+                            id="productBenefit"
+                            placeholder="Benefit"
+                            min="0">
+
+
+                        <!-- Add button -->
+                        <button
+                            class="add-btn"
+                            onclick="addProduct()">
+
+                            + Add Product
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 OPTIMIZATION ENGINE
+                 ========================================= -->
+
+            <div class="panel optimization-panel"
+                 id="optimization">
+
+
+                <!-- Section label -->
+                <p class="section-label">
+                    OPTIMIZATION ENGINE
+                </p>
+
+
+                <!-- Heading -->
+                <h2>
+                    Warehouse Capacity
+                </h2>
+
+
+                <!-- =================================
+                     CAPACITY INPUT
+                     ================================= -->
+
+                <div class="capacity-box">
+
+                    <label>
+                        Maximum Capacity
+                    </label>
+
+                    <input
+                        type="number"
+                        id="capacityInput"
+                        value="10"
+                        min="1"
+                        onchange="updateCapacity()">
+
+                </div>
+
+
+                <!-- =================================
+                     STORAGE UTILIZATION
+                     ================================= -->
+
+                <div class="utilization">
+
+                    <div class="utilization-header">
+
+                        <span>
+                            Storage Utilization
+                        </span>
+
+                        <strong id="utilizationText">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Progress bar -->
+                    <div class="large-progress">
+
+                        <div
+                            class="large-progress-fill"
+                            id="utilizationBar">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     OPTIMIZATION BUTTON
+                     ================================= -->
+
+                <button
+                    class="optimize-btn"
+                    onclick="optimizeInventory()">
+
+                    ⚡ Optimize Inventory
+
+                </button>
+
+
+                <!-- =================================
+                     ALGORITHM INFORMATION
+                     ================================= -->
+
+                <div class="algorithm-info">
+
+                    <div class="algorithm-icon">
+                        🧠
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Dynamic Programming
+                        </strong>
+
+                        <p>
+                            0/1 Knapsack Algorithm
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             OPTIMIZATION RESULT
+             ========================================= -->
+
+        <section
+            class="result-section"
+            id="resultSection">
+
+
+            <!-- Result heading -->
+            <div class="result-header">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <p class="section-label">
+                        OPTIMIZATION COMPLETE
+                    </p>
+
+                    <h2>
+                        Recommended Inventory
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Result statistics -->
+            <div class="result-grid">
+
+
+                <!-- Maximum benefit -->
+                <div class="result-item">
+
+                    <span>
+                        Maximum Benefit
+                    </span>
+
+                    <strong id="resultBenefit">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- Storage used -->
+                <div class="result-item">
+
+                    <span>
+                        Storage Used
+                    </span>
+
+                    <strong id="resultStorage">
+                        0 / 10
+                    </strong>
+
+                </div>
+
+
+                <!-- Selected products -->
+                <div class="result-item">
+
+                    <span>
+                        Products Selected
+                    </span>
+
+                    <strong id="resultProducts">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 SELECTED PRODUCT LIST
+                 ================================= -->
+
+            <div class="selected-products">
+
+                <h3>
+                    Selected Products
+                </h3>
+
+                <div id="selectedList">
+
+                    <p class="empty-message">
+
+                        Click "Optimize Inventory"
+                        to see recommendations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             FOOTER
+             ========================================= -->
+
+        <footer>
+
+            <p>
+                © 2026 SmartInventory
+            </p>
+
+            <p>
+                DAA Project • 0/1 Knapsack •
+                Dynamic Programming
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         CONNECT JAVASCRIPT
+         ========================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
